@@ -64,10 +64,10 @@ const Collections = ({ account }: Props) => {
           <Button primary mr={2} onClick={onReceive} icon>
             <Box horizontal flow={1} alignItems="center">
               <IconReceive size={14} />
-              <Box>{t("NFT.collections.receiveCTA")}</Box>
+              <Box data-test-id="receiveNftButton">{t("NFT.collections.receiveCTA")}</Box>
             </Box>
           </Button>
-          <Button primary onClick={onOpenGallery}>
+          <Button primary onClick={onOpenGallery} data-test-id="seeGalleryButton">
             {t("NFT.collections.galleryCTA")}
           </Button>
         </TableHeader>
