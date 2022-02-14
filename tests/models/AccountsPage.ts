@@ -7,7 +7,7 @@ export class AccountsPage {
   readonly accountsPageTitle: Locator;
   readonly accountsList: Locator;
   readonly accountsRow: Locator;
-  
+
   constructor(page: Page) {
     this.page = page;
     this.addAccountButton = page.locator("data-test-id=accounts-add-account-button");
@@ -20,8 +20,7 @@ export class AccountsPage {
     await this.addAccountButton.click();
   }
 
-  async selectAccount() {
-    const account = await this.accountsRow.first();
-    await account.click();
+  async openAccount(account: string) {
+    await this.accountsList.locator(`text="${account}"`).click();
   }
 }

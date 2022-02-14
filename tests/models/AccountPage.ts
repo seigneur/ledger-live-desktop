@@ -14,4 +14,8 @@ export class AccountPage {
     this.seeGalleryButton = page.locator("data-test-id=seeGalleryButton");
     this.receiveNftButton = page.locator("data-test-id=receiveNftButton");
   }
+
+  async goToGallery() {
+    await this.seeGalleryButton.click();
+  }
 }
