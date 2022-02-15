@@ -100,7 +100,7 @@ const NftCard = ({ contract, tokenId, id, mode, account, withContextMenu = false
         <Skeleton width={40} minHeight={40} full={isGrid} show={show}>
           <Image nft={metadata} size={40} full={isGrid} />
         </Skeleton>
-        <Box ml={isGrid ? 0 : 3} flex={1} mt={isGrid ? 2 : 0}>
+        <Box ml={isGrid ? 0 : 3} flex={1} mt={isGrid ? 2 : 0} data-test-id="collection-nft-item">
           <Skeleton width={142} minHeight={24} barHeight={10} show={show}>
             <TitleContainer
               ff="Inter|Medium"

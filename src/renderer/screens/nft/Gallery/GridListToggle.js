@@ -33,14 +33,14 @@ const GridListToggle = () => {
         mr={1}
         active={nftsViewMode === "list"}
         onClick={setListMode}
-        data-test-id="gridview-button"
+        data-test-id="listview-button"
       >
         <ListIcon />
       </ToggleButton>
       <ToggleButton
         active={nftsViewMode === "grid"}
         onClick={setGridMode}
-        data-test-id="listview-button"
+        data-test-id="gridview-button"
       >
         <GridIcon />
       </ToggleButton>

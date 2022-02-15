@@ -13,14 +13,6 @@ test("ethereum account with NFTs", async ({ page }) => {
   const accountsPage = new AccountsPage(page);
   const accountPage = new AccountPage(page);
   const nftGalleryPage = new NftGalleryPage(page);
-/*
-  await test.step("NFT section should be present", async () => {
-    await layout.goToAccounts();
-    expect(accountsPage.addAccountButton).toBeTruthy();
-    await accountsPage.selectAccount();
-    expect(await page.screenshot()).toMatchSnapshot("ethereumNftAccount.png");
-  });
-*/
 
   await test.step("go to account page", async () => {
     await layout.goToAccounts();
@@ -34,11 +26,18 @@ test("ethereum account with NFTs", async ({ page }) => {
 
   await test.step("go To Gallery", async () => {
     await accountPage.goToGallery();
+    expect(await page.screenshot()).toMatchSnapshot("gallery-list.png");
+  });
+
+  await test.step("show gallery cards view", async () => {
+    await nftGalleryPage.showGridView();
     expect(await page.screenshot()).toMatchSnapshot("gallery-cards.png");
   });
 
-  await test.step("show List view", async () => {
-    await nftGalleryPage.showGridView();
-    expect(await page.screenshot()).toMatchSnapshot("gallery-list.png");
+  await test.step("display a nft collection", async () => {
+    await layout.goToAccounts();
+    await accountsPage.openAccount("Ethereum1NFT");
+    await accountPage.openCollection("Rarible");
+    expect(await page.screenshot()).toMatchSnapshot("collection-page.png")
   });
 });

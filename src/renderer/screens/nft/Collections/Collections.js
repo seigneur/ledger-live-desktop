@@ -59,7 +59,7 @@ const Collections = ({ account }: Props) => {
 
   return (
     <Box>
-      <TableContainer id="tokens-list" mb={50}>
+      <TableContainer data-test-id="nft-collections-list" mb={50}>
         <TableHeader title={t("NFT.collections.title")}>
           <Button primary mr={2} onClick={onReceive} icon>
             <Box horizontal flow={1} alignItems="center">
