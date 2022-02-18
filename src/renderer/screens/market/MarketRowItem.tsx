@@ -187,7 +187,7 @@ function MarketRowItem({
             </Text>
           </TableCell>
           <TableCell>
-            {currency.priceChangePercentage && (
+            {currency.priceChangePercentage ? (
               <FormattedVal
                 isPercent
                 isNegative
@@ -195,6 +195,8 @@ function MarketRowItem({
                 inline
                 withIcon
               />
+            ) : (
+              <Text fontWeight={"medium"}>-</Text>
             )}
           </TableCell>
           <TableCell>
