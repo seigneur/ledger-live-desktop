@@ -12,8 +12,8 @@ export class AccountPage {
     this.page = page;
     this.buttonsGroup = page.locator("data-test-id=account-buttons-group");
     this.settingsButton = page.locator("data-test-id=account-settings-button");
-    this.seeGalleryButton = page.locator("data-test-id=seeGalleryButton");
-    this.receiveNftButton = page.locator("data-test-id=receiveNftButton");
+    this.seeGalleryButton = page.locator("data-test-id=see-gallery-button");
+    this.receiveNftButton = page.locator("data-test-id=receive-nft-button");
     this.nftCollectionsList = page.locator("data-test-id=nft-collections-list");
   }
 

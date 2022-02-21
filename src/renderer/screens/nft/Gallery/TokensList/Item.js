@@ -106,7 +106,6 @@ const NftCard = ({ contract, tokenId, id, mode, account, withContextMenu = false
               ff="Inter|Medium"
               color="palette.text.shade100"
               fontSize={isGrid ? 4 : 3}
-              data-test-id="collection-nft-item"
             >
               {nftName || "-"}
             </TitleContainer>
