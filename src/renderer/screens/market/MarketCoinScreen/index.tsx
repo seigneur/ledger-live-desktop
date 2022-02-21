@@ -205,7 +205,7 @@ export default function MarketCoinScreen() {
             )}
           </CryptoCurrencyIconWrapper>
           <Flex pl={3} flexDirection="column" alignItems="left" pr={16}>
-            <Flex flexDirection="row" alignItems="center" justifyContent={'center'}>
+            <Flex flexDirection="row" alignItems="center" justifyContent={"center"}>
               <Title>{name}</Title>
               <StarContainer onClick={toggleStar}>
                 <Icon name={isStarred > 0 ? "StarSolid" : "Star"} size={28} />

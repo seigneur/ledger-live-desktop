@@ -315,7 +315,9 @@ function MarketList({
             </SortTableCell>
             <TableCell disabled>{t("market.marketList.crypto")}</TableCell>
             <TableCell disabled>{t("market.marketList.price")}</TableCell>
-            <TableCell disabled>{t("market.marketList.change")} ({range})</TableCell>
+            <TableCell disabled>
+              {t("market.marketList.change")} ({range})
+            </TableCell>
             <TableCell disabled>{t("market.marketList.marketCap")}</TableCell>
             {width > miniChartThreshold && (
               <TableCell disabled>{t("market.marketList.last7d")}</TableCell>
