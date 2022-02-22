@@ -61,10 +61,10 @@ const Collections = ({ account }: Props) => {
     <Box>
       <TableContainer data-test-id="nft-collections-list" mb={50}>
         <TableHeader title={t("NFT.collections.title")}>
-          <Button primary mr={2} onClick={onReceive} icon>
+          <Button primary mr={2} onClick={onReceive} icon data-test-id="receive-nft-button">
             <Box horizontal flow={1} alignItems="center">
               <IconReceive size={14} />
-              <Box data-test-id="receive-nft-button">{t("NFT.collections.receiveCTA")}</Box>
+              <Box>{t("NFT.collections.receiveCTA")}</Box>
             </Box>
           </Button>
           <Button primary onClick={onOpenGallery} data-test-id="see-gallery-button">

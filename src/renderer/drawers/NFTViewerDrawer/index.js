@@ -188,7 +188,7 @@ export function NFTViewerDrawer({ account, nftId, height }: NFTViewerDrawerProps
     <Box height={height}>
       {isPanAndZoomOpen && <NftPanAndZoom nft={metadata} onClose={closeNftPanAndZoom} />}
       <NFTViewerDrawerContainer>
-        <NFTViewerDrawerContent>
+        <NFTViewerDrawerContent data-test-id="nft-details-drawer">
           <StickyWrapper top={0} pb={3} pt="24px">
             <Text
               ff="Inter|SemiBold"

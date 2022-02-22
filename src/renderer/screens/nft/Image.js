@@ -131,6 +131,7 @@ class Image extends React.PureComponent<Props, State> {
             onLoad={() => this.setState({ loaded: true })}
             onError={() => this.setState({ error: true })}
             src={nft.media}
+            data-test-id="nft-drawer-image"
           />
         ) : (
           <Gen nft={nft} />

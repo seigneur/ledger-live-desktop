@@ -55,7 +55,7 @@ type NftPanAndZoomProps = {
 type BodyProps = { nft: NFTWithMetadata };
 
 const NftPanAndZoomBody = ({ nft }: BodyProps) => (
-  <NFTImageContainer>
+  <NFTImageContainer data-test-id="nft-image-full">
     <PrismaZoom
       style={{
         height: "100%",
