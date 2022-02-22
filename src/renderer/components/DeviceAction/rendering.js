@@ -195,12 +195,14 @@ const OpenManagerBtn = ({
   updateApp,
   firmwareUpdate,
   mt = 2,
+  ml = 0,
 }: {
   closeAllModal: () => void,
   appName?: string,
   updateApp?: boolean,
   firmwareUpdate?: boolean,
   mt?: number,
+  ml?: number,
 }) => {
   const history = useHistory();
   const { setDrawer } = useContext(context);
@@ -222,7 +224,7 @@ const OpenManagerBtn = ({
   }, [updateApp, firmwareUpdate, appName, history, closeAllModal, setDrawer]);
 
   return (
-    <Button mt={mt} primary onClick={onClick}>
+    <Button mt={mt} ml={ml} primary onClick={onClick}>
       <Trans i18nKey="DeviceAction.openManager" />
     </Button>
   );
@@ -461,7 +463,9 @@ export const renderError = ({
               mx={1}
             />
           ) : null}
-          {onRetry ? (
+          {withOpenManager ? (
+            <OpenManagerButton mt={0} ml={withExportLogs ? 4 : 0} />
+          ) : onRetry ? (
             <Button primary ml={withExportLogs ? 4 : 0} onClick={onRetry}>
               <Trans i18nKey="common.retry" />
             </Button>

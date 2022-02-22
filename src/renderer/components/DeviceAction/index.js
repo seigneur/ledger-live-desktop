@@ -4,7 +4,11 @@ import { createStructuredSelector } from "reselect";
 import { Trans } from "react-i18next";
 import { connect } from "react-redux";
 import type { Device, Action } from "@ledgerhq/live-common/lib/hw/actions/types";
-import { OutdatedApp, LatestFirmwareVersionRequired } from "@ledgerhq/live-common/lib/errors";
+import {
+  OutdatedApp,
+  LatestFirmwareVersionRequired,
+  NoSuchAppOnProvider,
+} from "@ledgerhq/live-common/lib/errors";
 import { getCurrentDevice } from "~/renderer/reducers/devices";
 import { setPreferredDeviceModel, setLastSeenDeviceInfo } from "~/renderer/actions/settings";
 import { preferredDeviceModelSelector } from "~/renderer/reducers/settings";
@@ -252,6 +256,14 @@ const DeviceAction = <R, H, P>({
       return renderError({
         error,
         requireFirmwareUpdate: true,
+      });
+    }
+
+    if (error instanceof NoSuchAppOnProvider) {
+      return renderError({
+        error,
+        withOpenManager: true,
+        withExportLogs: true,
       });
     }
 
