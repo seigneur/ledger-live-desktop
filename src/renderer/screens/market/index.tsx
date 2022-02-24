@@ -133,7 +133,7 @@ export default function Market() {
           </Flex>
           <Flex mx={4}>
             <Dropdown
-              label={t("market.rangeLabel")}
+              label={t("common.range")}
               menuPortalTarget={document.body}
               onChange={updateTimeRange}
               options={timeRanges}
