@@ -1578,7 +1578,7 @@
 | Ethereum | BTM | 0xcB97e65F07DA24D46BcDD078EBebd7C6E6E3d750 | Bytom |  | ethereum/erc20/bytom |
 | Ethereum | BYTS | 0x87F14E9460ceCb789F1B125b2E3e353Ff8ed6fcd | Bytus |  | ethereum/erc20/bytus |
 | Ethereum | BYT | 0xb089db4CeBBF0618b295D9DEFC7FEB00f56DA033 | Byzbit |  | ethereum/erc20/byzbit |
-| Ethereum | CGT | 0xF5238462E7235c7B62811567E63Dd17d12C2EAA0 | CACHE Gold | delisted, countervalues disabled | ethereum/erc20/cache_gold |
+| Ethereum | CGT | 0xF5238462E7235c7B62811567E63Dd17d12C2EAA0 | CACHE Gold |  | ethereum/erc20/cache_gold |
 | Ethereum | C4G3 | 0xf2Ef3551C1945A7218fc4eC0a75c9eCFDF012A4F | CAGE |  | ethereum/erc20/cage |
 | Ethereum | CALL | 0xBbe761EA1447A20b75aA485b7BCad4837415d7D7 | CALL |  | ethereum/erc20/call |
 | Ethereum | CAMI | 0xA809CeDeE9B61956c768EAa10272dd5E0FD1A985 | CAMI | countervalues disabled | ethereum/erc20/cami |
